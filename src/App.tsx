@@ -1,10 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import LandingPage from "./pages/LandingPage"
+
+//import i18n config 
+import "./i18n"
+
 function App() {
 
   return (
     <>
-     
-      <h1 className="text-3xl font-bold underline">Hello World</h1>
-      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
